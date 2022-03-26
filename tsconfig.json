@@ -3,6 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "rootDir": ".",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -21,7 +22,15 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@lernaia/user": [
+        "projects/user/src/public-api",
+        "dist/libs/user/user",
+        "dist/libs/user",
+      ]
+    },
+    "strictPropertyInitialization": false,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
