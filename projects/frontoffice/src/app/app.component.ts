@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '@lernaia/user';
+import { User, UserFacade } from '@lernaia/user';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -9,13 +9,13 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'frontoffice';
-  user$: Observable<string>;
+  user$: Observable<User>;
 
   constructor(
-    protected userService: UserService,
+    protected userFacade: UserFacade,
   ) {}
 
   ngOnInit(): void {
-    this.user$ = this.userService.get();
+    this.user$ = this.userFacade.get("1");
   }
 }

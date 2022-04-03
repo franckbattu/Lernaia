@@ -1,16 +1,17 @@
 {
   "name": "lernaia",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
-    "start:frontoffice:fr": "ng serve --port 4000 --project=frontoffice",
-    "start:frontoffice:en": "ng serve --port 4000 --project=frontoffice --configuration=en",
+    "start:frontoffice:fr": "ng serve --port 4200 --project=frontoffice",
+    "start:frontoffice:en": "ng serve --port 4200 --project=frontoffice --configuration=en",
+    "start:backoffice": "ng serve --port 4300 --project=backoffice",
     "test": "ng test",
-    "prebuild:frontoffice": "rimraf dist && npm run build:user",
     "build:user": "ng build --project user --configuration production",
     "build:frontoffice": "ng build --project frontoffice --configuration production --localize && ng run frontoffice:server --configuration production",
+    "build:backoffice": "ng build --project backoffice --configuration production",
     "serve:frontoffice": "node dist/frontoffice/server/main.js",
-    "extract:frontoffice:i18n": "ng extract-i18n frontoffice --format=xlf2 --output-path projects/frontoffice/src/i18n"
+    "extract-i18n:frontoffice": "ng extract-i18n frontoffice --format=xlf2 --output-path projects/frontoffice/src/i18n"
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@types/express": "^4.17.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "autoprefixer": "^10.4.4",
     "http-server": "^14.1.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
@@ -46,7 +48,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^13.0.0",
+    "postcss": "^8.4.12",
     "rimraf": "^3.0.2",
+    "tailwindcss": "^3.0.23",
     "typescript": "~4.4.3"
   }
 }

@@ -1,4 +1,4 @@
 <ng-container *ngIf="user$ | async as user">
-  <h1><span i18n="@@welcome.message">Bienvenue</span> {{ user }}</h1>
-  <p i18n="@@welcome.howareyou">Comment vas-tu aujourd'hui?</p>
+  <h1 i18n="@@welcome.message" class="text-blue-500">Bienvenue</h1>
+  <p i18n="@@welcome.mainInfos">Voici tes informations : {{ user | json }}</p>
 </ng-container>

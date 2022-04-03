@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { UserModule } from '@lernaia/user';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -10,9 +11,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
-    AppRoutingModule
+    AppRoutingModule,
+    UserModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

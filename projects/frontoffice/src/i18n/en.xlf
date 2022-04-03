@@ -10,13 +10,13 @@
         <target>Welcome</target>
       </segment>
     </unit>
-    <unit id="welcome.howareyou">
+    <unit id="welcome.mainInfos">
       <notes>
         <note category="location">projects/frontoffice/src/app/app.component.html:3,4</note>
       </notes>
       <segment>
-        <source>Comment vas-tu aujourd&apos;hui?</source>
-        <target>How are you today?</target>
+        <source>Voici tes informations : <ph id="0" equiv="INTERPOLATION" disp="{{ user | json }}"/></source>
+        <target>Your main informations: <ph id="0" equiv="INTERPOLATION" disp="{{ user | json }}"/></target>
       </segment>
     </unit>
   </file>
